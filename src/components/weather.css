@@ -4,27 +4,27 @@
   box-sizing: border-box;
 }
 html{
-  font-size: 18px;
+  font-size: 16px;
+  background-color: teal;
+
 }
 header{
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-body{
-  font-size: 1rem;
-}
+
 .container{
   background-image: linear-gradient(oliveDrab, yellow) ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  padding: .1rem;
   width: 50%;
   height: auto;
-  border-radius: 10px;
+  border-radius: .6rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,29 +33,31 @@ body{
 
 }
 h1{
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 
 }
 .card{
   width: 100%;
-  border-radius: 30px;
+  border-radius: 1.8rem;
   display: flex;
   text-align: center;
-  padding: 0 10%;
+  /*padding: 0 10%;*/
   margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
 
 }
  .card input[type= "text"]{
-  border-radius: 18px 0 0 18px;
+  border-radius: 1.1rem;
   border: 0;
   outline: 0;
   height: 100%;
   font-size: 1rem;
-  padding: 10px 25px;
-  width: 100%;
+  padding: .6rem 1rem;
+  width: auto;
 
 }
 .search-icon{
@@ -66,15 +68,16 @@ h1{
   width: min-content;
   font-size: 1rem;
   height: 100%;
-  padding: 10px 25px;
-  border-radius: 0 20px 20px 0;
+  padding: .6rem 1rem;
+  border-radius:  1.1rem ;
   cursor: pointer;
+  margin-left: 1rem;
 }
 .notification{
   /*display: none;*/
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 /*.container-con{
@@ -84,7 +87,7 @@ h1{
 img{
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 10rem;
   height: max-content;
 
 
@@ -98,7 +101,7 @@ img{
 
 }
 .description{
-  font-size: 20px;
+  font-size: 1.2;
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
@@ -112,14 +115,21 @@ img{
 }
 
   @media screen and (max-width: 767px){
+    html{
+      font-size: 12px;
+    }
     container{
-      width: 100%;
+    /*  width: 100%;
       top: 20%;
-      left: 20%;
+      left: 20*/
       /*padding: 0;*/
     }
+    .card{
+      flex-direction: column;
+      justify-content: center;
+    }
      .card input[type= "text"]{
-       font-size: 1rem;
        font-variant: small-caps;
+       margin-bottom: .5rem;
      }
   }

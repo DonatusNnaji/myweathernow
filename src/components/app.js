@@ -4,6 +4,13 @@ import './weather.css';
  const [currentWeather, setCurrentWeather] = useState(null);
  const [city, setcity] = useState('');
  const notificationMsg = useRef(null);
+ const inputRef = useRef(null);
+ const dynamicWidth = () => {
+   if(inputRef.current){
+     const remWidth = inputRef.current.srollWidth/16 ;
+     inputRef.current.style.width = remWidth + 'rem' ;
+   }
+ };
  const handleSearch = (ev) => {
    if (city=== '') {
      notificationMsg.current.style.display= 'block';
@@ -40,7 +47,7 @@ import './weather.css';
         <div>
        <div className="card">
           <input type= "text" id= "search" name="search" value= {city} placeholder= 'search city.......' required
-          onChange= {(ev) => setcity(ev.target.value)}/>
+          onChange= {(ev) => {setcity(ev.target.value); dynamicWidth()}}  ref = {inputRef}/>
           <span className="search-icon" onClick = {handleSearch} >search</span>
         </div>
         <div className= "notification" ref= {notificationMsg}></div>
