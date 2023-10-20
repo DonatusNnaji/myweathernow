@@ -50,14 +50,14 @@ h1{
   align-items: center;
 
 }
- .card input[type= "text"]{
+ input[name = 'searchInput']{
+ /*.card input[type= "text"]{*/
   border-radius: 1.1rem;
   border: 0;
   outline: 0;
   height: 100%;
   font-size: 1rem;
   padding: .6rem 1rem;
-  width: auto;
 
 }
 .search-icon{
@@ -69,7 +69,7 @@ h1{
   font-size: 1rem;
   height: 100%;
   padding: .6rem 1rem;
-  border-radius:  1.1rem ;
+  border-radius: 2rem;
   cursor: pointer;
   margin-left: 1rem;
 }
@@ -128,8 +128,8 @@ img{
       flex-direction: column;
       justify-content: center;
     }
-     .card input[type= "text"]{
-       font-variant: small-caps;
+     input[name = 'searchInput']{
        margin-bottom: .5rem;
+         padding: .6rem 0.5rem;
      }
   }

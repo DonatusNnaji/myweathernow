@@ -4,10 +4,10 @@ import './weather.css';
  const [currentWeather, setCurrentWeather] = useState(null);
  const [city, setcity] = useState('');
  const notificationMsg = useRef(null);
- const inputRef = useRef(null);
+ const inputRef = useRef('');
  const dynamicWidth = () => {
    if(inputRef.current){
-     const remWidth = inputRef.current.srollWidth/16 ;
+     const remWidth = inputRef.current.scrollWidth/16 ;
      inputRef.current.style.width = remWidth + 'rem' ;
    }
  };
@@ -46,8 +46,8 @@ import './weather.css';
         <header>Weather </header>
         <div>
        <div className="card">
-          <input type= "text" id= "search" name="search" value= {city} placeholder= 'search city.......' required
-          onChange= {(ev) => {setcity(ev.target.value); dynamicWidth()}}  ref = {inputRef}/>
+          <input type= "text"  name = "searchInput" value= {city} placeholder= 'search city.......' required
+          onChange= {(ev) => {setcity(ev.target.value); dynamicWidth()}}  ref = {inputRef} style = {{width: 'auto'}}/>
           <span className="search-icon" onClick = {handleSearch} >search</span>
         </div>
         <div className= "notification" ref= {notificationMsg}></div>
