@@ -8,7 +8,7 @@ import './weather.css';
  const dynamicWidth = () => {
    if(inputRef.current){
      const remWidth = inputRef.current.scrollWidth/16 ;
-     inputRef.current.style.width = `${remWidth + 0.2}rem`;
+     inputRef.current.style.width = remWidth + "rem";
    }
  };
  const handleSearch = (ev) => {
@@ -45,7 +45,10 @@ import './weather.css';
         <div>
        <div className="card">
           <input type= "text"  name = "searchInput" value= {city} placeholder= 'search city.......' required
-          onChange= {(ev) => {setcity(ev.target.value); dynamicWidth()}}  ref = {inputRef} style = {{width: 'auto'}}/>
+          onChange= {(ev) => {
+            setcity(ev.target.value);
+            dynamicWidth()}}
+          ref = {inputRef} style = {{width: 'auto'}}/>
           <span className="search-icon" onClick = {handleSearch} >search</span>
         </div>
         <div className= "notification" ref= {notificationMsg}></div>
