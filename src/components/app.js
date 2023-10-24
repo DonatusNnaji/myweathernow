@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import './weather.css';
  function WeatherApp() {
  const [currentWeather, setCurrentWeather] = useState(null);
@@ -17,6 +17,9 @@ import './weather.css';
     handleSearch(ev);
    }
  };
+ useEffect(()=>{
+   inputRef.current.focus();
+ }, []);
 
  const handleSearch = (ev) => {
    if (city=== '') {
@@ -43,7 +46,7 @@ import './weather.css';
        }
      };
      fetchData();
-     setcity(null);
+     setcity('');
    }
  }
   return (
@@ -52,6 +55,7 @@ import './weather.css';
       <div>
      <div className="card">
         <input type= "text"  name = "searchInput" value= {city} placeholder= 'search city.......' required
+        spellCheck= "true"
         onChange= {(ev) => {
           setcity(ev.target.value);
           dynamicWidth()}}
@@ -71,15 +75,15 @@ import './weather.css';
           <div className = "box">
              <div className = "box1">
                <span className ="humidityIcon"></span>
-               <div className = "boxcon">
-                  <span className = "humidityValue">{currentWeather.main.humidity}&#37;</span>
+               <div className = "boxCon">
+                  <span className = "humidityValue val">{currentWeather.main.humidity}&#37;</span>
                   <p>Humidity</p>
                </div>
              </div>
              <div className = "box1">
                <span className = "windSpeedIcon"></span>
                <div className = "boxCon">
-                 <span className = "windspeedValue">{currentWeather.wind.speed}m&#8725;s</span>
+                 <span className = "windspeedValue val">{currentWeather.wind.speed}m&#8725;s</span>
                  <p>Wind Speed </p>
                </div>
              </div>

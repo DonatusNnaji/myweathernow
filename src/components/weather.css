@@ -111,6 +111,7 @@ img{
 .box{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 1.5rem;
 }
 .box1{
   display: flex;
@@ -121,6 +122,15 @@ img{
 .boxCon{
 display: flex;
 flex-direction: column;
+}
+.boxCon .Val{
+  font-size: 0.5rem;
+  font-weight: 600;
+}
+.boxCon p{
+  font-size: .8rem;
+  font-weight: 600;
+  font-variant: small-caps;
 }
 
 
