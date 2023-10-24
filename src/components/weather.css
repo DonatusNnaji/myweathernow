@@ -108,6 +108,21 @@ img{
   font-weight: 500;
   margin-bottom: 2rem;
 }
+.box{
+  display: flex;
+  justify-content: space-around;
+}
+.box1{
+  display: flex;
+}
+.humidityIcon{
+
+}
+.boxCon{
+display: flex;
+flex-direction: column;
+}
+
 
   @media screen and (max-width: 767px){
     html{
