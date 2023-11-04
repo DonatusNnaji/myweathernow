@@ -119,17 +119,20 @@ img{
 .humidityIcon{
 
 }
+ .windSpeedIcon{
+
+ }
 .boxCon{
 display: flex;
 flex-direction: column;
 }
 .boxCon .Val{
   font-size: 0.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .boxCon p{
-  font-size: .8rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   font-variant: small-caps;
 }
 

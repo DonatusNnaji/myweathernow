@@ -47,6 +47,7 @@ import './weather.css';
      };
      fetchData();
      setcity('');
+     inputRef.current.focus();
    }
  }
   return (
@@ -55,7 +56,7 @@ import './weather.css';
       <div>
      <div className="card">
         <input type= "text"  name = "searchInput" value= {city} placeholder= 'search city.......' required
-        spellCheck= "true"
+        spellCheck= {true}
         onChange= {(ev) => {
           setcity(ev.target.value);
           dynamicWidth()}}
